@@ -1,122 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hockeys - Asignment 3</title>
 
-    <!-- Tailwind and DaisyUI CDN Link -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom CSS Link -->
-    <link rel="stylesheet" href="css/custom.css" />
-  </head>
-  <body>
-    <!-- Header section start here -->
-    <header class="py-6">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hockeys - Asignment 3</title>
+
+  <!-- Tailwind and DaisyUI CDN Link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS Link -->
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body>
+  <!-- Header section start here -->
+  <header class="py-6">
+    <div class="container mx-auto p-4">
       <!-- Top bar section start here -->
-      <div class="container mx-auto p-4">
-        <section class="top-bar-section flex justify-between items-center">
-          <div class="mobile-nav lg:hidden">
-            <div class="navbar bg-base-100">
-              <div class="navbar-start">
-                <div class="dropdown">
-                  <div
-                    tabindex="0"
-                    role="button"
-                    class="btn btn-ghost btn-circle"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h7"
-                      />
-                    </svg>
-                  </div>
-                  <ul
-                    tabindex="0"
-                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-                  >
-                    <li class="hover:text-[#ff4240] hover:font-medium">
-                      <a href="#">Home</a>
-                    </li>
-                    <li class="hover:text-[#ff4240] hover:font-medium">
-                      <a href="#">About</a>
-                    </li>
-                    <li class="hover:text-[#ff4240] hover:font-medium">
-                      <a href="#">Pages</a>
-                    </li>
-                    <li class="hover:text-[#ff4240] hover:font-medium">
-                      <a href="#">Blog</a>
-                    </li>
-                    <li class="hover:text-[#ff4240] hover:font-medium">
-                      <a href="#">Contact</a>
-                    </li>
-                  </ul>
+      <section class="top-bar-section flex justify-between items-center">
+        <div class="mobile-nav lg:hidden">
+          <div class="navbar bg-base-100 px-0">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle justify-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                  </svg>
                 </div>
+                <ul tabindex="0"
+                  class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li class="hover:text-[#ff4240] hover:font-medium">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="hover:text-[#ff4240] hover:font-medium">
+                    <a href="#">About</a>
+                  </li>
+                  <li class="hover:text-[#ff4240] hover:font-medium">
+                    <a href="#">Pages</a>
+                  </li>
+                  <li class="hover:text-[#ff4240] hover:font-medium">
+                    <a href="#">Blog</a>
+                  </li>
+                  <li class="hover:text-[#ff4240] hover:font-medium">
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="logo-section">
-            <img src="./img/logo.png" alt="Hockeys logo" />
+        </div>
+        <div class="logo-section">
+          <img src="./img/logo.png" alt="Hockeys logo" />
+        </div>
+        <div class="nav-section hidden lg:block">
+          <nav>
+            <ul class="flex space-x-14 text-base font-manrope text-[#424247] font-medium">
+              <li class="hover:text-[#ff4240] hover:font-medium">
+                <a href="#">Home</a>
+              </li>
+              <li class="hover:text-[#ff4240] hover:font-medium">
+                <a href="#">About</a>
+              </li>
+              <li class="hover:text-[#ff4240] hover:font-medium">
+                <a href="#">Pages</a>
+              </li>
+              <li class="hover:text-[#ff4240] hover:font-medium">
+                <a href="#">Blog</a>
+              </li>
+              <li class="hover:text-[#ff4240] hover:font-medium">
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="search-btn-section flex items-center space-x-6">
+          <div class="search-icon hidden lg:block">
+            <i class="fa-solid fa-magnifying-glass text-[#424247]"></i>
           </div>
-          <div class="nav-section hidden lg:block">
-            <nav>
-              <ul
-                class="flex space-x-14 text-base font-manrope text-[#424247] font-medium"
-              >
-                <li class="hover:text-[#ff4240] hover:font-medium">
-                  <a href="#">Home</a>
-                </li>
-                <li class="hover:text-[#ff4240] hover:font-medium">
-                  <a href="#">About</a>
-                </li>
-                <li class="hover:text-[#ff4240] hover:font-medium">
-                  <a href="#">Pages</a>
-                </li>
-                <li class="hover:text-[#ff4240] hover:font-medium">
-                  <a href="#">Blog</a>
-                </li>
-                <li class="hover:text-[#ff4240] hover:font-medium">
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
-            </nav>
+          <div class="ticket-btn">
+            <button class="btn bg-[#ff4240] border-none text-white px-8 lg:text-xl lg:hover:text-[#ff4240]">
+              Get Ticket
+            </button>
           </div>
-          <div class="search-btn-section flex items-center space-x-6">
-            <div class="search-icon hidden lg:block">
-              <i class="fa-solid fa-magnifying-glass text-[#424247]"></i>
-            </div>
-            <div class="ticket-btn">
-              <button
-                class="btn bg-[#ff4240] border-none text-white px-8 lg:text-xl hover:text-[#ff4240]"
-              >
-                Get Ticket
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
       <!-- Top bar section end here -->
-    </header>
-    <!-- Header section end here -->
-    <main></main>
-    <footer></footer>
-    <script
-      src="https://kit.fontawesome.com/dc8ea59ec7.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+
+      <!-- Slider section start here -->
+      <section class="slider-section mt-7 lg:mt-14">
+        <div class="carousel w-full rounded-lg">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="./img/banner-img.png" class="w-full" />
+            <div
+              class="banner-text bg-black text-white p-5 absolute bottom-12 right-12 rounded-[15px] space-y-5 py-5 hidden lg:block">
+              <h3 class="font-extrabold text-2xl">
+                Meet all the heroes from the field
+              </h3>
+              <p>
+                Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+                <br />
+                turpis placerat dolor. Purus urna in sit nullam proin.
+              </p>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide4" class="btn btn-circle bg-[#131318] border-none text-white">❮</a>
+              <a href="#slide2" class="btn btn-circle bg-[#131318] border-none text-white">❯</a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
+            <div
+              class="banner-text bg-black text-white p-5 absolute bottom-12 right-12 rounded-[15px] space-y-5 py-5 hidden lg:block">
+              <h3 class="font-extrabold text-2xl">
+                Meet all the heroes from the field
+              </h3>
+              <p>
+                Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+                <br />
+                turpis placerat dolor. Purus urna in sit nullam proin.
+              </p>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide1" class="btn btn-circle bg-[#131318] border-none text-white">❮</a>
+              <a href="#slide3" class="btn btn-circle bg-[#131318] border-none text-white">❯</a>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" class="w-full" />
+            <div
+              class="banner-text bg-black text-white p-5 absolute bottom-12 right-12 rounded-[15px] space-y-5 py-5 hidden lg:block">
+              <h3 class="font-extrabold text-2xl">
+                Meet all the heroes from the field
+              </h3>
+              <p>
+                Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+                <br />
+                turpis placerat dolor. Purus urna in sit nullam proin.
+              </p>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide2" class="btn btn-circle bg-[#131318] border-none text-white">❮</a>
+              <a href="#slide4" class="btn btn-circle bg-[#131318] border-none text-white">❯</a>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" class="w-full" />
+            <div
+              class="banner-text bg-black text-white p-5 absolute bottom-12 right-12 rounded-[15px] space-y-5 py-5 hidden lg:block">
+              <h3 class="font-extrabold text-2xl">
+                Meet all the heroes from the field
+              </h3>
+              <p>
+                Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+                <br />
+                turpis placerat dolor. Purus urna in sit nullam proin.
+              </p>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide3" class="btn btn-circle bg-[#131318] border-none text-white">❮</a>
+              <a href="#slide1" class="btn btn-circle bg-[#131318] border-none text-white">❯</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- mobile section -->
+      <section class="slider-section mt-7 lg:mt-14 lg:hidden">
+        <div class="carousel w-full rounded-lg">
+          <div id="slide1" class="carousel-item w-full">
+            <div class="banner-text bg-black text-white p-7 rounded-[15px] space-y-5 ">
+              <h3 class="font-extrabold text-[18px] lg:text-2xl">
+                Meet all the heroes from the field
+              </h3>
+              <p class="text-sm">
+                Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit
+                nullam proin.
+              </p>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item w-full">
+            <div class="banner-text bg-black text-white p-5 rounded-[15px] space-y-5">
+              <h3 class="font-extrabold text-[18px] lg:text-2xl">
+                Meet all the heroes from the field
+              </h3>
+              <p class="text-sm">
+                Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit
+                nullam proin.
+              </p>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <div class="banner-text bg-black text-white p-5 rounded-[15px] space-y-5">
+              <h3 class="font-extrabold text-[18px] lg:text-2xl">
+                Meet all the heroes from the field
+              </h3>
+              <p class="text-sm">
+                Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit
+                nullam proin.
+              </p>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+
+            <div class="banner-text bg-black text-white p-5 rounded-[15px] space-y-5">
+              <h3 class="font-extrabold text-[18px] lg:text-2xl">
+                Meet all the heroes from the field
+              </h3>
+              <p class="text-sm">
+                Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit
+                nullam proin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Slider section end here -->
+    </div>
+  </header>
+  <!-- Header section end here -->
+  <main></main>
+  <footer></footer>
+  <script src="https://kit.fontawesome.com/dc8ea59ec7.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
